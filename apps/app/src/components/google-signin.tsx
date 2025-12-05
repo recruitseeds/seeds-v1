@@ -1,7 +1,7 @@
 "use client";
 
-import { createClient } from "@v1/supabase/client";
-import { Button } from "@v1/ui/button";
+import { createClient } from "@seeds/supabase/client";
+import { Button } from "@seeds/ui/button";
 
 export function GoogleSignin() {
   const supabase = createClient();
