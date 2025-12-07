@@ -31,7 +31,8 @@
     "./components/color-highlight-button": "./components/color-highlight-button.tsx",
     "./components/color-highlight-popover": "./components/color-highlight-popover.tsx",
     "./components/text-align-button": "./components/text-align-button.tsx",
-    "./components/link-popover": "./components/link-popover.tsx"
+    "./components/link-popover": "./components/link-popover.tsx",
+    "./hooks/use-mobile": "./hooks/use-mobile.tsx"
   },
   "dependencies": {
     "@floating-ui/react": "^0.27.16",

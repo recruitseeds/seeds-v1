@@ -1,22 +1,22 @@
-import { SignOut } from "@/components/sign-out";
-import { getI18n } from "@/locales/server";
-import { getUser } from "@seeds/supabase/queries";
+import { Container } from '@/components/container'
+import { getI18n } from '@/locales/server'
+import { getUser } from '@seeds/supabase/queries'
 
 export const metadata = {
-  title: "Home",
-};
+  title: 'Home',
+}
 
 export default async function Page() {
-  const { data } = await getUser();
-  const t = await getI18n();
+  const { data } = await getUser()
+  const t = await getI18n()
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <p>{t("welcome", { name: data?.user?.email })}</p>
-
-        <SignOut />
+    <Container>
+      <div>
+        hi
+        {/* <p>{t("welcome", { name: data?.user?.email })}</p> */}
+        {/* <SignOut /> */}
       </div>
-    </div>
-  );
+    </Container>
+  )
 }

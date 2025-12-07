@@ -1,4 +1,15 @@
+import { DashboardHeader } from '@/components/dashboard-header'
+import { SidebarInset, SidebarProvider } from '@seeds/ui/sidebar'
+import { AppSidebar } from './components/left-sidebar'
+
 export default function Layout({ children }: { children: React.ReactNode }) {
-  // This is where your authenticated app lives, add a sidebar, header etc.
-  return children;
+  return (
+    <SidebarProvider>
+      <AppSidebar />
+      <SidebarInset className="overflow-x-hidden">
+        <DashboardHeader />
+        {children}
+      </SidebarInset>
+    </SidebarProvider>
+  )
 }
